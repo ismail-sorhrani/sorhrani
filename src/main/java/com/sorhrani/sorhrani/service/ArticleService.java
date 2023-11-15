@@ -49,8 +49,8 @@ public class ArticleService implements IDao<Article> {
 	public List<Article> findAll() {
 		return repository.findAll();
 	}
-	public List<Article> findByDateBetween(Date dateDebut, Date dateFin) {
-        return repository.findByDateBetween(dateDebut, dateFin);
+	public List<Article> findByDateBetween(Long id,Date dateDebut, Date dateFin) {
+        return repository.findByDateBetween(id,dateDebut, dateFin);
     }
 
 

@@ -78,8 +78,8 @@ public class ArticleController {
 		}
 	}
 
-	@GetMapping("/filterByDate")
-    public List<Article> findByDateBetween(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateDebut,@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFin) {
-        return service.findByDateBetween(dateDebut, dateFin);
+	@GetMapping("/filterByDate/{id}")
+    public List<Article> findByDateBetween(@PathVariable long id,@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateDebut,@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date dateFin) {
+        return service.findByDateBetween(id,dateDebut, dateFin);
     }
 }
