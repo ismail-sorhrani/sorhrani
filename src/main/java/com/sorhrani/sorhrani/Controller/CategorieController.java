@@ -69,5 +69,6 @@ public class CategorieController {
 			return ResponseEntity.ok(categorie);
 		}
 	}
+	
 
 }
